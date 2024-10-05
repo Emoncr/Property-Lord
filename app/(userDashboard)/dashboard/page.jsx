@@ -1,12 +1,9 @@
-import DashboardLayout from '@/app/_components/DashboardComponents/DashboardLayout';
 import React from 'react';
 
 const DashboardPage = () => {
     return (
         <main>
-            <DashboardLayout>
-                <h1>Dashboard</h1>
-            </DashboardLayout>
+            <h1 className="text-3xl font-bold text-black">Dashboard</h1>
         </main>
     );
 };

@@ -8,7 +8,6 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 
 const ListingCard = () => {
     return (
@@ -28,7 +27,7 @@ const ListingCard = () => {
                             />
                         </Link>
                     </div>
-                    <div className="absolute -left-[4px] top-4">
+                    <div className="absolute -left-[4px] top-4 min-w-[73px]">
                         <Image
                             src={'/icons/feature_icon.png'}
                             alt="Listing Image"
@@ -38,7 +37,7 @@ const ListingCard = () => {
                             style={{ width: '100%', height: 'auto' }}
                         />
                     </div>
-                    <div className="absolute -left-[4px] top-12">
+                    <div className="absolute -left-[4px] top-12 min-w-[62px]">
                         <Image
                             src={'/icons/sale_icon.png'}
                             alt="Listing Image"
@@ -48,7 +47,7 @@ const ListingCard = () => {
                             style={{ width: '100%', height: 'auto' }}
                         />
                     </div>
-                    <div className="absolute right-0 top-0">
+                    <div className="absolute right-0 top-0 min-w-[38px]">
                         <Image
                             src={'/icons/Bookmark.png'}
                             alt="Listing Image"
@@ -77,7 +76,7 @@ const ListingCard = () => {
                             {'7,500'}
                         </p>
                     </div>
-                    <div className="flex flex-wrap items-center justify-start gap-6 gap-y-4 overflow-hidden py-1 sm:gap-12 md:gap-7 lg:gap-5 xl:gap-8">
+                    <div className="flex flex-wrap items-center justify-start gap-6 !gap-y-1 overflow-hidden py-1 sm:gap-12 md:gap-7 lg:gap-5 xl:gap-8">
                         <div>
                             <p className="mt-2 flex max-w-[120px] items-center gap-1 truncate text-sm text-secondary-foreground">
                                 <BedDouble strokeWidth={3} size={16} />
