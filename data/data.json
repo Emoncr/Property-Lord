@@ -1,0 +1,45 @@
+{
+    "title": "3 Bedroom Apartment with Sea View",
+    "description": "Spacious 3 bedroom apartment with modern amenities, sea view, and located in a prime area. Ideal for families.",
+    "price": 250000,
+    "property_type": "Apartment",
+    "location": {
+        "address": "123 Ocean Drive",
+        "city": "Miami",
+        "state": "FL",
+        "postal_code": "33101",
+        "country": "USA"
+    },
+    "parking_spots": 2,
+    "area": 1800,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "floor": 5,
+    "total_floors": 10,
+    "amenities": [
+        "Swimming Pool",
+        "Gym",
+        "Elevator",
+        "Parking",
+        "24/7 Security"
+    ],
+    "year_built": 2015,
+    "heating_type": "Central",
+    "cooling_type": "Central Air",
+    "furnishing": "Fully Furnished || Not Furnished || Semi Furnished",
+    "images": [
+        "https://example.com/images/apartment1.jpg",
+        "https://example.com/images/apartment2.jpg"
+    ],
+    "agent": {
+        "id": 701,
+        "name": "John Realtor",
+        "phone": "+1 555-1234",
+        "email": "john.realtor@example.com",
+        "agency": "Top Realty Group",
+        "agency_address": "456 Real Estate Blvd, Miami, FL"
+    },
+    "listing_type": "For Sale",
+    "availability": "Available",
+    "status": "Active"
+}

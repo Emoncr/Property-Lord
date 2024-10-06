@@ -1,7 +1,12 @@
+import CreateListing from '@/app/_pages/UserDashboardPages/PostPages/createListing/CreateListing';
 import React from 'react';
 
 const CreatePost = () => {
-    return <div>CreatePost</div>;
+    return (
+        <>
+            <CreateListing />
+        </>
+    );
 };
 
 export default CreatePost;

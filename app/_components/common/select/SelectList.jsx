@@ -57,6 +57,7 @@ const SelectList = ({
     value,
     setValue,
     showMax,
+    searchbar,
 }) => {
     const isForm = !!form;
     const formValue = isForm ? form.getValues()?.[name] : null;
@@ -90,7 +91,9 @@ const SelectList = ({
                 >
                     {(handleClose) => (
                         <Command className="w-full rounded-none md:rounded-sm">
-                            <CommandInput placeholder="Search..." />
+                            {searchbar && (
+                                <CommandInput placeholder="Search..." />
+                            )}
                             <CommandList>
                                 {!options.length ? (
                                     <div

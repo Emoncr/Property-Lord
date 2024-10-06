@@ -18,8 +18,7 @@ const SelelctResponsiveWrapper = ({ children, field, trigerProps }) => {
         setOpen(false);
     }, []);
     const triggerClass =
-        'w-full flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors  disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-10 focus:outline-none focus:ring-1 focus:ring-ring';
-
+        'w-full flex items-center justify-between whitespace-nowrap rounded-md text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 border border-input bg-transparent shadow-sm hover:bg-background/20 hover:text-accent-foreground h-10 focus:outline-none focus:ring-1 focus:ring-ring ';
     if (isDesktop) {
         return (
             <Popover open={open} onOpenChange={setOpen}>
@@ -30,7 +29,10 @@ const SelelctResponsiveWrapper = ({ children, field, trigerProps }) => {
                 >
                     <SelectTrigger {...trigerProps} />
                 </PopoverTrigger>
-                <PopoverContent className="w-[200px] p-0" align="start">
+                <PopoverContent
+                    className="w-[var(--radix-popover-trigger-width)] min-w-[var(--radix-popover-trigger-width)] p-0"
+                    align="start"
+                >
                     {children(handleClose)}
                 </PopoverContent>
             </Popover>

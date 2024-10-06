@@ -20,7 +20,7 @@ const TriggerButton = ({
             <div className="flex w-full justify-between px-3">
                 <div className="flex w-full justify-between gap-4">
                     <div className="flex items-center text-sm">
-                        <span className="font-normal text-muted-foreground">
+                        <span className="font-normal text-muted">
                             {multiSelectValues?.size
                                 ? title
                                 : 'Select ' + title}
@@ -50,7 +50,7 @@ const TriggerButton = ({
                                             .map((option) => (
                                                 <div
                                                     key={option?._id}
-                                                    className="g-3 flex items-center rounded-md bg-accent px-1.5"
+                                                    className="g-3 flex w-full items-center rounded-md bg-accent px-1.5"
                                                 >
                                                     <Badge
                                                         variant="secondary"
@@ -138,12 +138,16 @@ const TriggerButton = ({
     return (
         <div className="flex w-full justify-between px-3">
             <div className="flex w-full justify-between gap-4">
-                <span className="font-normal text-muted-foreground">
-                    {singleSelectValue
-                        ? options.find(
-                              (option) => option._id == singleSelectValue
-                          )?.label
-                        : 'Select ' + title}
+                <span className="font-normal text-secondary">
+                    {singleSelectValue ? (
+                        options.find(
+                            (option) => option._id == singleSelectValue
+                        )?.label
+                    ) : (
+                        <span className="font-normal text-muted">
+                            {'Select ' + title}
+                        </span>
+                    )}
                 </span>
 
                 <div className="flex items-center gap-1">

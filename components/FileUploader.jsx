@@ -11,6 +11,7 @@ import { useControllableState } from '@/hooks/useControllableState';
 import { toast } from 'sonner';
 import heic2any from 'heic2any';
 import imageCompression from 'browser-image-compression';
+import { Upload } from 'lucide-react';
 
 export function FileUploader(props) {
     const {
@@ -37,6 +38,7 @@ export function FileUploader(props) {
 
     const onDrop = React.useCallback(
         async (acceptedFiles, rejectedFiles) => {
+            console.log(acceptedFiles);
             if (!multiple && maxFiles === 1 && acceptedFiles.length > 1) {
                 toast.error('Cannot upload more than 1 file at a time');
                 return;
@@ -196,9 +198,9 @@ export function FileUploader(props) {
                     <div
                         {...getRootProps()}
                         className={cn(
-                            'group relative grid h-72 w-full cursor-pointer place-items-center rounded-lg border-2 border-dashed border-muted-foreground/25 px-5 py-2.5 text-center transition hover:bg-muted/25',
+                            'group relative grid h-72 w-full cursor-pointer place-items-center rounded-lg border-2 border-dashed border-border bg-background/50 px-5 py-2.5 text-center transition hover:bg-background',
                             'ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
-                            isDragActive && 'border-primary',
+                            isDragActive && 'border-primary bg-primary/10',
                             (isDisabled || isConverting) &&
                                 'pointer-events-none opacity-60',
                             className
@@ -207,15 +209,10 @@ export function FileUploader(props) {
                     >
                         <input {...getInputProps()} />
                         {isDragActive ? (
-                            <div className="flex flex-col items-center justify-center gap-4 sm:px-5">
+                            <div className="flex flex-col items-center justify-center gap-2 sm:px-5">
                                 <div className="rounded-full">
                                     <div className="flex items-center justify-center">
-                                        <Image
-                                            width={42}
-                                            height={42}
-                                            src={'/icons/upload.png'}
-                                            alt="icon"
-                                        />
+                                        <Upload size={42} />
                                     </div>
                                 </div>
                                 <div className="space-y-px">
@@ -225,19 +222,17 @@ export function FileUploader(props) {
                                 </div>
                             </div>
                         ) : (
-                            <div className="flex flex-col items-center justify-center gap-4 sm:px-5">
+                            <div className="flex flex-col items-center justify-center gap-2 sm:px-5">
                                 <div className="rounded-full">
                                     <div className="flex items-center justify-center">
-                                        <Image
-                                            width={42}
-                                            height={42}
-                                            src={'/icons/upload.png'}
-                                            alt="icon"
+                                        <Upload
+                                            size={56}
+                                            className="text-secondary-foreground"
                                         />
                                     </div>
                                 </div>
                                 <div className="space-y-px">
-                                    <p className="text-sm font-normal text-[#0B0B0B] sm:text-base">
+                                    <p className="text-sm font-normal text-secondary-foreground sm:text-base">
                                         {'Drag your file to start uploading'}
                                     </p>
                                 </div>
@@ -351,7 +346,7 @@ function FileCard({ file, isConverting, onRemove }) {
                 ) : null}
                 <div className="flex w-full flex-col justify-center gap-2">
                     <div className="space-y-px">
-                        <p className="line-clamp-1 text-sm font-medium text-foreground/80">
+                        <p className="line-clamp-1 text-sm font-medium text-secondary">
                             {file.name}
                         </p>
                     </div>
