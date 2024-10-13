@@ -27,7 +27,7 @@ const ListingCard = () => {
                             />
                         </Link>
                     </div>
-                    <div className="absolute -left-[4px] top-4 min-w-[73px]">
+                    <div className="absolute -left-[4px] top-4 min-w-[65px] max-w-[73px]">
                         <Image
                             src={'/icons/feature_icon.png'}
                             alt="Listing Image"
@@ -37,7 +37,7 @@ const ListingCard = () => {
                             style={{ width: '100%', height: 'auto' }}
                         />
                     </div>
-                    <div className="absolute -left-[4px] top-12 min-w-[62px]">
+                    <div className="absolute -left-[4px] top-12 min-w-[62px] max-w-[62px]">
                         <Image
                             src={'/icons/sale_icon.png'}
                             alt="Listing Image"

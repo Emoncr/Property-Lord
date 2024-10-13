@@ -1,7 +1,7 @@
-import { useToast } from '@/components/ui/use-toast';
 import catchError from '@/lib/catchError';
 import { useState } from 'react';
 import useSWR, { mutate } from 'swr';
+import { useToast } from './use-toast';
 
 const useRequest = () => {
     const { toast } = useToast();

@@ -13,6 +13,7 @@ const Select = ({
     setValue,
     showMax = 3,
     zIndex = 2000,
+    searchbar = false,
 }) => {
     const options = useMemo(() => {
         return [...manualOption];
@@ -34,6 +35,7 @@ const Select = ({
                 setValue,
                 required,
                 zIndex,
+                searchbar,
             }}
         />
     );
