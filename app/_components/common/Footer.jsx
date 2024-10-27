@@ -169,7 +169,7 @@ const Footer = () => {
             </div>
             <div className="relative">
                 <Image
-                    src="/images/16903885190.png"
+                    src="/images/footer-bg.webp"
                     alt="footer"
                     width={0}
                     height={0}

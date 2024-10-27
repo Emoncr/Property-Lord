@@ -1,11 +1,12 @@
+import MessagePage from '@/app/_pages/UserDashboardPages/MessagesPages/MessagePage';
 import React from 'react';
 
-const MessagePage = () => {
+const Message = () => {
     return (
         <div>
-            <h1>Messages</h1>
+            <MessagePage />
         </div>
     );
 };
 
-export default MessagePage;
+export default Message;
