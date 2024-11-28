@@ -11,12 +11,13 @@ const Footer = () => {
                         <div className="flex items-center">
                             <Link href={'/'}>
                                 <div>
-                                    <span className="font-primary text-2xl font-bold text-secondary">
-                                        Property
-                                    </span>
-                                    <span className="font-primary text-2xl font-bold text-primary">
-                                        Lord
-                                    </span>
+                                    <Image
+                                        src={'/Logo/logo.png'}
+                                        alt="Logo"
+                                        width={100}
+                                        height={100}
+                                        className="object-cover"
+                                    />
                                 </div>
                             </Link>
                         </div>

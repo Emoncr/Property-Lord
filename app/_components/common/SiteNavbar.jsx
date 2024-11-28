@@ -54,7 +54,7 @@ const SiteNavbar = () => {
 
             {/* ====== Login Buttons ===== */}
             <div className="flex items-center space-x-4">
-                {isLogin ? (
+                {!isLogin ? (
                     <div>
                         <Link
                             href="/dashboard"
@@ -68,7 +68,7 @@ const SiteNavbar = () => {
                     <div className="flex items-center space-x-4">
                         <Link
                             href="/signin"
-                            className="font-medium text-green-500 hover:text-green-600"
+                            className="font-medium text-black hover:text-green-600"
                         >
                             Sign in
                         </Link>

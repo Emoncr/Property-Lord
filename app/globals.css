@@ -4,9 +4,6 @@
 
 @layer base {
     :root {
-        --font-space-grotesk: 'Space Grotesk', sans-serif;
-        --font-poppins: 'Poppins', sans-serif;
-
         --background: 0 0% 96%;
         --foreground: 230 75% 98%;
         --card: 0 0% 100%;
@@ -78,6 +75,12 @@
 }
 .nav_container {
     @apply mx-auto max-w-[1340px] px-5 xl:px-0;
+}
+.font-primary {
+    font-family: var(--font-space-grotesk);
+}
+.font-secondary {
+    font-family: var(--font-poppins);
 }
 
 h1,

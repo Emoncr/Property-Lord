@@ -18,8 +18,8 @@ module.exports = {
         },
         extend: {
             fontFamily: {
-                primary: ['var(--font-space-grotesk)'],
-                secondary: ['var(--font-poppins)'],
+                primary: ['Space Grotesk', 'sans-serif'],
+                secondary: ['Poppins', 'sans-serif'],
             },
             colors: {
                 border: 'hsl(var(--border))',

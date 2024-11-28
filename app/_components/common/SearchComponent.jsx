@@ -62,7 +62,7 @@ export default function SearchComponent() {
                 </div>
                 <div className="sm:col-span-3">
                     <Label className="font-primary text-base font-medium text-secondary">
-                        Location
+                        Price Range
                     </Label>
                     <Select
                         value={selectedValue}
@@ -74,7 +74,7 @@ export default function SearchComponent() {
                         <SelectTrigger
                             className={`border-0 p-0 shadow-none selection:outline-none focus:outline-none focus:ring-0 active:outline-none ${selectedValue ? '!text-secondary' : '!text-muted-foreground'}`}
                         >
-                            <SelectValue placeholder="Location" />
+                            <SelectValue placeholder="$200-$350" />
                         </SelectTrigger>
                         <SelectContent>
                             <SelectItem value="new-york">New York</SelectItem>
@@ -85,7 +85,7 @@ export default function SearchComponent() {
                 </div>
                 <div className="sm:col-span-3">
                     <Label className="font-primary text-base font-medium text-secondary">
-                        Location
+                        Type
                     </Label>
                     <Select
                         value={selectedValue}
@@ -97,7 +97,7 @@ export default function SearchComponent() {
                         <SelectTrigger
                             className={`border-0 p-0 shadow-none selection:outline-none focus:outline-none focus:ring-0 active:outline-none ${selectedValue ? '!text-secondary' : '!text-muted-foreground'}`}
                         >
-                            <SelectValue placeholder="Location" />
+                            <SelectValue placeholder="Home" />
                         </SelectTrigger>
                         <SelectContent>
                             <SelectItem value="new-york">New York</SelectItem>

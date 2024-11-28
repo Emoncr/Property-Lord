@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const SiteLogo = () => {
@@ -5,12 +6,13 @@ const SiteLogo = () => {
         <div className="flex">
             <Link href={'/'}>
                 <div>
-                    <span className="font-primary text-xl font-bold text-secondary sm:text-2xl">
-                        Property
-                    </span>
-                    <span className="font-primary text-xl font-bold text-primary sm:text-2xl">
-                        Lord
-                    </span>
+                    <Image
+                        src={'/Logo/logo.png'}
+                        alt="Logo"
+                        width={100}
+                        height={100}
+                        className="object-cover"
+                    />
                 </div>
             </Link>
         </div>

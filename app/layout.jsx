@@ -21,7 +21,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={`${spaceGrotesk.variable} ${poppins.variable}`}>
+            <body
+                className={`${spaceGrotesk.variable} ${poppins.variable} antialiased`}
+            >
                 <NextTopLoader
                     color="#e74d3c"
                     height={4}
